@@ -3,6 +3,9 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function App() {
 	return (
   		<View style={styles.container}>
+			<View style={styles.darkMode}> 
+				<Text style={styles.darkModeText}>Style Inheritance</Text>
+			</View>
   	  		<View style={[styles.lightblueBg, styles.box, styles.boxShadow]}>
 				<Text>Lightblue box</Text>
 			</View> 	
@@ -14,11 +17,18 @@ export default function App() {
 }
 
 // exportable for global styles in other Component files
+// View -> Text color style is not inheritable
 const styles = StyleSheet.create({
 	container: { 
 		flex: 1,
 		backgroundColor: 'plum',
 		padding: 60
+	},
+	darkMode: {
+		backgroundColor: 'black',
+	},
+	darkModeText: {
+		color: 'white'
 	},
 	box: {
 		width: 250,
