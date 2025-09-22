@@ -1,4 +1,4 @@
-import { View, StatusBar } from 'react-native'
+import { View, ActivityIndicator } from 'react-native'
 
 export default function App() {
 
@@ -6,12 +6,11 @@ export default function App() {
 		<View
 			style={{ flex: 1, backgroundColor: 'plum', padding: 60 }}
 		>
-			<StatusBar
-				barStyle='light-content'
-				hidden
-			>
+			<ActivityIndicator />
+			<ActivityIndicator size='large' />
+			<ActivityIndicator size='large' color='midnightblue' />
+			<ActivityIndicator size='large' color='midnightblue' animating={false} />
 
-			</StatusBar>
 		</View >
 	);
 }
